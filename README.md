@@ -11,7 +11,7 @@ We provide all the jupyter notebooks in each subfolder to run and evaluate all a
 
 
 1. '${algorithm_name}' folders contain mostly the original repo's content and code, but we also adapt a bit so that it could be run on the new datasets that have not been tested in their published paper.
-2. -------
+2. 'analysis' folder constains script for reproducing the figures in our paper.
 3. -------
 4. -------
 
