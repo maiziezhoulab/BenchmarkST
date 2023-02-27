@@ -30,6 +30,7 @@ Github link: https://github.com/ys-zong/conST.git
 ### GraphST
 
 Github link: https://github.com/JinmiaoChenLab/GraphST
+
 installation: https://deepst-tutorials.readthedocs.io/en/latest/Installation.html
 
 ### DeepST
