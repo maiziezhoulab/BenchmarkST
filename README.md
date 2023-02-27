@@ -56,3 +56,7 @@ Github link: https://github.com/jianhuupenn/SpaGCN
 ### SEDR
 
 Github link: https://github.com/JinmiaoChenLab/SEDR
+
+## Citation
+
+-------
