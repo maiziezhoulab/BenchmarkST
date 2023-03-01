@@ -24,10 +24,7 @@ Please follow the readme or jupyter notebook instructions in each subfolder for 
 #### ADEPT
 
 Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
-Our tutorial: 
-<br>
--------
-<br>
+Our tutorial: [tutorial]()
 
 
 #### conST
@@ -43,9 +40,13 @@ Github link: https://github.com/JinmiaoChenLab/GraphST
 
 installation: https://deepst-tutorials.readthedocs.io/en/latest/Installation.html
 
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/GraphST/run_GraphST/tutorial.ipynb)
+
 #### DeepST
 
 Github link: https://github.com/JiangBioLab/DeepST
+
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/DeepST/deepst/run_DeepST.ipynb)
 
 #### conGI
 
@@ -55,17 +56,27 @@ Github link: https://github.com/biomed-AI/ConGI
 
 Github link: https://github.com/QIFEIDKN/STAGATE_pyG
 
+installation: https://stagate.readthedocs.io/en/latest/Installation_pyG.html
+
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/STAGATE_pyG/run_STAGATE/run_STAGATE.ipynb)
+
 #### CCST
 
 Github link: https://github.com/xiaoyeye/CCST
+
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/CCST/run_CCST.ipynb)
 
 #### SpaGCN
 
 Github link: https://github.com/jianhuupenn/SpaGCN
 
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/SpaGCN/run_SpaGCN/tutorial.ipynb)
+
 #### SEDR
 
 Github link: https://github.com/JinmiaoChenLab/SEDR
+
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/SEDR/run_SEDR.ipynb)
 
 ## Citation
 
