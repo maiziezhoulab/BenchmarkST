@@ -67,4 +67,4 @@ If you find this code useful, please consider citing
 
 
 ## Acknowledgement
-The code is partly adapted from [SEDR](https://github.com/JinmiaoChenLab/SEDR), [GIC](https://github.com/cmavro/Graph-InfoClust-GIC), [SpaGCN](https://github.com/jianhuupenn/SpaGCN).
+original repository link:https://github.com/ys-zong/conST, slight code modifications applied to load in new ST datasets.
