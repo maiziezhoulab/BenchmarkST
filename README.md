@@ -19,15 +19,24 @@ We provide all the jupyter notebooks in each subfolder to run and evaluate all a
 
 Please follow the readme or jupyter notebook instructions in each subfolder for further details.
 
-### Github repository and installation links:
+### original Github repository links and our script running tutorials:
 
 #### ADEPT
 
 Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
+Our tutorial: 
+<br>
+-------
+<br>
+
 
 #### conST
 
 Github link: https://github.com/ys-zong/conST
+Our tutorial: 
+<br>
+https://github.com/maiziezhoulab/BenchmarkST/blob/main/conST/run_conST.ipynb
+<br>
 
 #### GraphST
 
