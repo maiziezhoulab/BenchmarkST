@@ -34,10 +34,8 @@ Our tutorial:
 
 Github link: https://github.com/ys-zong/conST
 
-Our tutorial: 
-<br>
-[tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/conST/run_conST.ipynb)
-<br>
+Our tutorial: [tutorial](https://github.com/maiziezhoulab/BenchmarkST/blob/main/conST/run_conST.ipynb)
+
 
 #### GraphST
 
