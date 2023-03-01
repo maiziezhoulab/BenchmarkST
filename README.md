@@ -21,11 +21,11 @@ Please follow the readme or jupyter notebook instructions in each subfolder for 
 
 ### ADEPT
 
-Github link: https://github.com/maiziezhoulab/AquilaDeepFilter.git
+Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
 
 ### conST
 
-Github link: https://github.com/ys-zong/conST.git
+Github link: https://github.com/ys-zong/conST
 
 ### GraphST
 
