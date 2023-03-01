@@ -41,3 +41,6 @@ python setup.py install
 
 ## Citation
 Dong, Kangning, and Shihua Zhang. "Deciphering spatial domains from spatially resolved transcriptomics with an adaptive graph attention auto-encoder." Nature Communications 13.1 (2022): 1-12.
+
+## Acknowledgement
+original repository link:https://github.com/QIFEIDKN/STAGATE_pyG, slight code modifications applied to load in new ST datasets.

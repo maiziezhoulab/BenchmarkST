@@ -200,3 +200,7 @@ Spatial transcriptomics data of other platforms can be downloaded https://www.sp
 
 ### Contact
 Feel free to submit an issue or contact us at xuchang0214@163.com for problems about the packages.
+
+
+## Acknowledgement
+original repository link:https://github.com/JiangBioLab/DeepST, slight code modifications applied to load in new ST datasets.

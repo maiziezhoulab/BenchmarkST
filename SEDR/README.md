@@ -99,3 +99,7 @@ We also provide three examples:
 	URL = {https://www.biorxiv.org/content/10.1101/2021.06.15.448542},
 }
 ```
+
+
+## Acknowledgement
+original repository link:https://github.com/JinmiaoChenLab/SEDR, slight code modifications applied to load in new ST datasets.

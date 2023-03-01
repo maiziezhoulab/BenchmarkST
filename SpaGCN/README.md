@@ -92,3 +92,7 @@ Please consider citing the following reference:
 - https://www.nature.com/articles/s41592-021-01255-8
 
 <br>
+
+
+## Acknowledgement
+original repository link:https://github.com/jianhuupenn/SpaGCN, slight code modifications applied to load in new ST datasets.
