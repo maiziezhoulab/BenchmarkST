@@ -19,41 +19,43 @@ We provide all the jupyter notebooks in each subfolder to run and evaluate all a
 
 Please follow the readme or jupyter notebook instructions in each subfolder for further details.
 
-### ADEPT
+### Github repository and installation links:
+
+#### ADEPT
 
 Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
 
-### conST
+#### conST
 
 Github link: https://github.com/ys-zong/conST
 
-### GraphST
+#### GraphST
 
 Github link: https://github.com/JinmiaoChenLab/GraphST
 
 installation: https://deepst-tutorials.readthedocs.io/en/latest/Installation.html
 
-### DeepST
+#### DeepST
 
 Github link: https://github.com/JiangBioLab/DeepST
 
-### conGI
+#### conGI
 
 Github link: https://github.com/biomed-AI/ConGI
 
-### STAGATE
+#### STAGATE
 
 Github link: https://github.com/QIFEIDKN/STAGATE_pyG
 
-### CCST
+#### CCST
 
 Github link: https://github.com/xiaoyeye/CCST
 
-### SpaGCN
+#### SpaGCN
 
 Github link: https://github.com/jianhuupenn/SpaGCN
 
-### SEDR
+#### SEDR
 
 Github link: https://github.com/JinmiaoChenLab/SEDR
 
