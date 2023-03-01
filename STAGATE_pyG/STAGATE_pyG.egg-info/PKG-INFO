@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: STAGATE-pyG
+Version: 1.0.0
+Summary: Deciphering spatial domains from spatially resolved transcriptomics with adaptive graph attention auto-encoder
+Home-page: https://github.com/QIFEIDKN/STAGATE
+Author: Kangning Dong
+Author-email: dongkangning16@mails.ucas.ac.cn
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+
+ 
+
