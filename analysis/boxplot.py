@@ -91,32 +91,32 @@ if __name__ == '__main__':
         # print("**********stagate")
         # print(np.mean(stagate_data[k]))
         # print(np.std(stagate_data[k]))
-        # r_dict[k].append(np.mean(stagate_data[k]))
+        r_dict[k].append(np.mean(stagate_data[k]))
 
         # print("**********ccst")
         # print(np.mean(ccst_data[k]))
         # print(np.std(ccst_data[k]))
-        # r_dict[k].append(np.mean(ccst_data[k]))
+        r_dict[k].append(np.mean(ccst_data[k]))
 
         # print("**********sedr")
         # print(np.mean(sedr_data[k]))
         # print(np.std(sedr_data[k]))
-        # r_dict[k].append(np.mean(sedr_data[k]))
+        r_dict[k].append(np.mean(sedr_data[k]))
 
         # print("**********spagcn")
         # print(np.mean(spagcn_data[k]))
         # print(np.std(spagcn_data[k]))
-        # r_dict[k].append(np.mean(spagcn_data[k]))
+        r_dict[k].append(np.mean(spagcn_data[k]))
 
         # print("**********deepst")
         # print(np.mean(deepst_data[k]))
         # print(np.std(deepst_data[k]))
-        # r_dict[k].append(np.mean(deepst_data[k]))
+        r_dict[k].append(np.mean(deepst_data[k]))
 
         # print("**********graphst")
         # print(np.mean(graphst_data[k]))
         # print(np.std(graphst_data[k]))
-        # r_dict[k].append(np.mean(graphst_data[k]))
+        r_dict[k].append(np.mean(graphst_data[k]))
 
         # print("**********")
         d = {'ARI': deepst_data[k] + stagate_data[k] + ccst_data[k] + sedr_data[k] + spagcn_data[k] + graphst_data[k],
@@ -128,6 +128,6 @@ if __name__ == '__main__':
         print(df)
         sns.boxplot(x=df[k], y=df["ARI"])
         ax.set_ylim([0, 0.85])
-        plt.savefig(os.path.join(dir_, k + '_benchmarking_boxplot0224.pdf'))
+        # plt.savefig(os.path.join(dir_, k + '_benchmarking_boxplot0224.pdf'))
     print(r_dict)
     # print(ccst_data)
