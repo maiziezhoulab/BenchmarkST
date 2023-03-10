@@ -29,3 +29,6 @@ For the step-by-step tutorial, please refer to:
 
 ## Citation
 Long et al. (2023). Spatially informed clustering, integration, and deconvolution of spatial transcriptomics with GraphST. **Nature Communications**. (Accepted) 
+
+## Acknowledgement
+original repository link:https://github.com/JinmiaoChenLab/GraphST, slight code modifications applied to load in new ST datasets.
