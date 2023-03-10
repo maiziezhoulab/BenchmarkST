@@ -35,7 +35,7 @@ def plot_heatmap(heatmap_df,save_dir,data_key,save_df=True):
     return 0
 
 
-def read_txt_to_df(results_path='/home/ethan/BenchmarkST/ari_results/*.txt'):
+def read_txt_to_df(results_path='/home/yunfei/spatial_benchmarking/BenchmarkST/ari_results/*.txt'):
     tools = []
     results = defaultdict(list)
     datasets = ['DLPFC151507', 'DLPFC151508', 'DLPFC151509', 'DLPFC151510', 
@@ -73,9 +73,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('--input_dir', type=str,default='/home/ethan/BenchmarkST/ari_results')
+    parser.add_argument('--input_dir', type=str,default='/home/yunfei/spatial_benchmarking/BenchmarkST/ari_results')
     parser.add_argument('--data_type', type=str,default="ari")
-    parser.add_argument('--save_dir', type=str,default="/home/ethan/BenchmarkST/data/")
+    parser.add_argument('--save_dir', type=str,default="/home/yunfei/spatial_benchmarking/BenchmarkST/ari_results")
     args = parser.parse_args()
 
     input_dir = args.input_dir
