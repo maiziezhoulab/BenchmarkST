@@ -25,7 +25,7 @@ def plot_heatmap(heatmap_df,save_dir,data_key,save_df=True):
         with open(save_dir+'/'+data_key+'_across_datasets_heatmap_data.pkl','wb') as hmpk:
             pickle.dump(heatmap_df,hmpk)
     
-    fig, ax = plt.subplots(figsize=(len(heatmap_df.columns)+1,len(heatmap_df.index)))
+    fig, ax = plt.subplots(figsize=(len(heatmap_df.columns)+15,len(heatmap_df.index)))
     #sns.heatmap(heatmap_df, annot=True, ax=ax,cmap='viridis',vmin=0, vmax=1,fmt='.1f',mask=heatmap_df.isnull())
     sns.heatmap(heatmap_df, annot=True, ax=ax,cmap='viridis',vmin=0, vmax=1,mask=heatmap_df.isnull())
     ax.xaxis.tick_top() # x axis on top
@@ -38,7 +38,7 @@ def plot_heatmap(heatmap_df,save_dir,data_key,save_df=True):
     return 0
 
 
-def read_txt_to_df(results_path='/home/ethan/BenchmarkST/ari_results/*.txt'):
+def read_txt_to_df(results_path='/home/yunfei/spatial_benchmarking/BenchmarkST/ari_results/*.txt'):
     tools = []
     results = defaultdict(list)
     datasets = ['DLPFC151507', 'DLPFC151508', 'DLPFC151509', 'DLPFC151510', 
@@ -60,7 +60,8 @@ def read_txt_to_df(results_path='/home/ethan/BenchmarkST/ari_results/*.txt'):
                 for i in range(1, len(res)):
                     runs.append(0.0 if float(res[i]) <= 0.0 else float(res[i]))
                 if sum(runs) == 0:
-                    results[dataset].append(float('nan'))
+                    # results[dataset].append(float('nan'))
+                    results[dataset].append(0.0)
                 else:
                     results[dataset].append(sum(runs) / len(runs))
     # sort_res = [[] ]
@@ -77,7 +78,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('--input_dir', type=str,default='/home/ethan/BenchmarkST/ari_results')
+    parser.add_argument('--input_dir', type=str,default='/home/yunfei/spatial_benchmarking/BenchmarkST/ari_results/')
     parser.add_argument('--data_type', type=str,default="ari")
     parser.add_argument('--save_dir', type=str,default="/home/ethan/BenchmarkST/data/")
     args = parser.parse_args()
