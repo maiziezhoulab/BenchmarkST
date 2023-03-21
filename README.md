@@ -25,7 +25,7 @@ Please follow the readme or jupyter notebook instructions in each subfolder for 
 
 Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
 
-Our tutorial: [run_ADEPT]()
+Our tutorial: [run_ADEPT](https://github.com/maiziezhoulab/BenchmarkST/blob/main/ADEPT/run_ADEPT/run_ADEPT.ipynb)
 
 
 #### conST
@@ -53,7 +53,7 @@ Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/mai
 
 Github link: https://github.com/biomed-AI/ConGI
 
-Our tutorial: [run_conGI]()
+Our tutorial: [run_conGI](https://github.com/maiziezhoulab/BenchmarkST/blob/main/ConGI/run_ConGI/run_conGI.ipynb)
 
 #### STAGATE
 
