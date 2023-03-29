@@ -24,7 +24,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]  # '151673'
    aris = []
-   dir_ = '../benchmarking_data/DLPFC12'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
 
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -67,7 +67,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]  #
    aris = []
-   dir_ = '../benchmarking_data/BC'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/BC'
 
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -111,7 +111,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]  # '151673'
    aris = []
-   dir_ = '../benchmarking_data/mMAMP'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/mMAMP'
 
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -154,7 +154,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]
    aris = []
-   dir_ = '../benchmarking_data/STARmap_mouse_visual_cortex'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_visual_cortex'
    
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -198,7 +198,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]
    aris = []
-   dir_ = '../benchmarking_data/STARmap_mouse_PFC'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_PFC'
    
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -245,7 +245,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]  #
    aris = []
-   dir_ = '../benchmarking_data/mHypothalamus'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus'
    
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
@@ -290,7 +290,7 @@ for setting_combi in setting_combinations:
 
    dataset = setting_combi[1]  # '151673'
    aris = []
-   dir_ = '../benchmarking_data/Her2_tumor'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/Her2_tumor'
    
    save_path = '../results/' + dataset + '/'
    deepen = run(save_path = save_path, 
