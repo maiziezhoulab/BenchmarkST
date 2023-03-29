@@ -115,7 +115,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       # print(preds)
       # print(obs_df['original_clusters'].to_list())
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
@@ -199,7 +199,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
       FMS = fowlkes_mallows_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
       PS = purity_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
@@ -280,7 +280,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
       FMS = fowlkes_mallows_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
       PS = purity_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
@@ -359,7 +359,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
 
       print('Dataset:', dataset)
@@ -416,7 +416,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       # print(obs_df)
       # print(np.array(preds).shape)
       ARI = adjusted_rand_score(np.array(preds)[:, 1], ad.obs['original_clusters'].to_list())
@@ -474,7 +474,7 @@ for setting_combi in setting_combinations:
       # calculate metric ARI
       obs_df = ad.obs.dropna()
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
 
       print('Dataset:', dataset)
@@ -532,7 +532,7 @@ for setting_combi in setting_combinations:
       
       ARI = adjusted_rand_score(np.array(preds)[:, 1], obs_df['original_clusters'].to_list())
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
-      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       print('Dataset:', dataset)
       print('ARI:', ARI)
       aris.append(ARI)
