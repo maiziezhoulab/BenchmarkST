@@ -36,9 +36,9 @@ parser.add_argument( '--embedding_data_path', type=str, default='Embedding_data'
 parser.add_argument( '--result_path', type=str, default='results') 
 parser.add_argument( '--DGI', type=int, default=1, help='run Deep Graph Infomax(DGI) model, otherwise direct load embeddings')
 parser.add_argument( '--load', type=int, default=0, help='Load pretrained DGI model')
-parser.add_argument( '--num_epoch', type=int, default=100, help='numebr of epoch in training DGI')
+parser.add_argument( '--num_epoch', type=int, default=5000, help='numebr of epoch in training DGI')
 parser.add_argument( '--hidden', type=int, default=256, help='hidden channels in DGI') 
-parser.add_argument( '--PCA', type=int, default=1, help='run PCA or not')   
+parser.add_argument( '--PCA', type=int, default=1, help='run PCA or not')
 parser.add_argument( '--cluster', type=int, default=1, help='run cluster or not')
 parser.add_argument( '--n_clusters', type=int, default=5, help='number of clusters in Kmeans, when ground truth label is not avalible.') #5 on MERFISH, 20 on Breast
 parser.add_argument( '--draw_map', type=int, default=1, help='run drawing map')
@@ -81,7 +81,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '../benchmarking_data/DLPFC12'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
    save_dir_r = './'
    ad = load_DLPFC(root_dir=dir_, section_id=args.data_name)
    aris = []
@@ -166,7 +166,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/BC'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/BC'
    ad = load_BC(root_dir=dir_, section_id=args.data_name)
    aris = []
    chis = []
@@ -247,7 +247,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/STARmap_mouse_visual_cortex'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_visual_cortex'
    ad = load_mVC(root_dir=dir_, section_id=args.data_name)
    aris = []
    sss = []
@@ -328,7 +328,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/STARmap_mouse_PFC'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_PFC'
    ad = load_mPFC(root_dir=dir_, section_id=args.data_name)
    aris = []
    args.embedding_data_path = args.embedding_data_path +'/'+ args.data_name +'/'
@@ -385,7 +385,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus'
    ad = load_mHypothalamus(root_dir=dir_, section_id=args.data_name)
    aris = []
    args.embedding_data_path = args.embedding_data_path +'/'+ args.data_name +'/'
@@ -443,7 +443,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/Her2_tumor'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/Her2_tumor'
    ad = load_her2_tumor(root_dir=dir_, section_id=args.data_name)
    aris = []
    args.embedding_data_path = args.embedding_data_path +'/'+ args.data_name +'/'
@@ -499,7 +499,7 @@ for setting_combi in setting_combinations:
    args.data_name = setting_combi[1]  # '151673'
    dataset = setting_combi[1]
    args.data_type = 'nsc'
-   dir_ = '/home/yunfei/spatial_benchmarking/benchmarking_data/mMAMP'
+   dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/mMAMP'
    ad = load_mMAMP(root_dir=dir_, section_id=args.data_name)
    aris = []
    args.embedding_data_path = args.embedding_data_path +'/'+ args.data_name +'/'
