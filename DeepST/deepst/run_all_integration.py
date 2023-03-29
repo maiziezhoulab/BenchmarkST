@@ -42,7 +42,7 @@ for section_list in sets_:
         
 
         for e in range(iter_):
-            data_path = "/home/yunfei/spatial_benchmarking/benchmarking_data/DLPFC12" 
+            data_path = "/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12" 
             data_name_list = temp_section_list
             save_path = "../Results" 
             n_domains = 7 
@@ -105,7 +105,7 @@ for section_list in sets_:
         dict_out[sec1 + '_' + sec2 + '_' + sec3 + '_' + sec4] = {}
 
     for e in range(iter_):
-        data_path = "/home/yunfei/spatial_benchmarking/benchmarking_data/DLPFC12" 
+        data_path = "/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12" 
         data_name_list = temp_section_list
         save_path = "../Results" 
         n_domains = 7 
@@ -174,7 +174,7 @@ for index_ in range(1, len(section_list)):
         
 
         for e in range(iter_):
-            data_path = "/home/yunfei/spatial_benchmarking/benchmarking_data/BC" 
+            data_path = "/data/maiziezhou_lab/Datasets/ST_datasets/BC" 
             data_name_list = temp_section_list
             save_path = "../Results" 
             n_domains = 20 
@@ -246,7 +246,7 @@ for index_ in range(1, len(section_list)):
         
 
         for e in range(iter_):
-            data_path = "/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus" 
+            data_path = "/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus" 
             data_name_list = temp_section_list
             save_path = "../Results" 
             n_domains = 20 
@@ -313,7 +313,7 @@ for section_list in sets_:
         
 
         for e in range(iter_):
-            data_path = "/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus" 
+            data_path = "/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus" 
             data_name_list = temp_section_list
             save_path = "../Results" 
             n_domains = 20 
