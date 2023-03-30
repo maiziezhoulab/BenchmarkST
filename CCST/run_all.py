@@ -414,7 +414,9 @@ for setting_combi in setting_combinations:
          print('Data type not specified')
 
       # calculate metric ARI
-      obs_df = ad.obs.dropna()
+      # obs_df = ad.obs.dropna()
+      print(ad.obs)
+      print(ad.obs.dropna())
       obs_df['ccst_preds'] = np.array(preds)[:, 1]
       obs_df.to_csv(os.path.join(save_dir_r, 'ccst_' + args.data_name + '_iter_' + str(iter_) + '_out.csv'), index=True)
       # print(obs_df)
