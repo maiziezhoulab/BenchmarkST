@@ -179,7 +179,7 @@ def main(args):
     else:
         newdim = args.Dim_PCA
     if args.Dim_PCA > len(adata_h5.var.index):
-        newdim = len(adata_h5.obs.index)-1
+        newdim = len(adata_h5.var.index)-1
     else:
         newdim = args.Dim_PCA
     print(adata_h5.X.shape)
