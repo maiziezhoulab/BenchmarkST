@@ -47,7 +47,7 @@ parser.add_argument( '--batch_size', type=int, default=512, help='training batch
 parser.add_argument( '--gpu_id', type=str, default="0", help='default gpu id')
 args = parser.parse_args()
 # iters=2 # for script testing
-iters = 5 # for boxplotting
+iters = 20 # for boxplotting
 # the location of R, which is necessary for mclust algorithm. Please replace the path below with local R installation path
 # os.environ['R_HOME'] = '/home/yunfei/anaconda3/envs/GraphST/lib/R'
 # os.environ['R_USER'] = '/home/yunfei/anaconda3/envs/GraphST/lib/python3.8/site-packages'
