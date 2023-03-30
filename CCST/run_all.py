@@ -82,7 +82,6 @@ for setting_combi in setting_combinations:
    dataset = setting_combi[1]
    args.data_type = 'nsc'
    dir_ = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
-   save_dir_r = './'
    ad = load_DLPFC(root_dir=dir_, section_id=args.data_name)
    aris = []
    pss = []
