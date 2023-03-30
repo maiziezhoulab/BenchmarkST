@@ -175,16 +175,10 @@ def main(args):
     print(adata_h5.obsm['spatial'])
     #count = adata_h5.X 
     newdim = args.Dim_PCA
-    if newdim > len(adata_h5.obs.index):
-        newdim = len(adata_h5.obs.index)-1
-    else:
-        newdim = args.Dim_PCA
-    newdim = args.Dim_PCA
-    if newdim > len(adata_h5.var.index):
-        newdim = len(adata_h5.var.index)-1
-    else:
-        newdim = args.Dim_PCA
-    print(adata_h5.X.shape)
+    if newdim > min(len(adata_h5.obs.index), len(adata_h5.var.index)):
+        newdim = min(len(adata_h5.obs.index), len(adata_h5.var.index))-1
+    
+    # print(adata_h5.X.shape)
     print(newdim)
     features = adata_preprocess(adata_h5, min_cells=args.min_cells, pca_n_comps=newdim)
     gene_ids = adata_h5.var['gene_ids']
