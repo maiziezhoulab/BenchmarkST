@@ -174,11 +174,13 @@ def main(args):
     print(adata_h5.obs)
     print(adata_h5.obsm['spatial'])
     #count = adata_h5.X 
-    if args.Dim_PCA > len(adata_h5.obs.index):
+    newdim = args.Dim_PCA
+    if newdim > len(adata_h5.obs.index):
         newdim = len(adata_h5.obs.index)-1
     else:
         newdim = args.Dim_PCA
-    if args.Dim_PCA > len(adata_h5.var.index):
+    newdim = args.Dim_PCA
+    if newdim > len(adata_h5.var.index):
         newdim = len(adata_h5.var.index)-1
     else:
         newdim = args.Dim_PCA
