@@ -45,7 +45,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -88,7 +88,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -132,7 +132,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -176,7 +176,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -220,7 +220,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -267,7 +267,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
@@ -312,7 +312,7 @@ for setting_combi in setting_combinations:
 
       ARI = adjusted_rand_score(adata.obs["DeepST_refine_domain"], adata.obs["original_clusters"])
       save_df = adata.obs[['original_clusters', 'DeepST_refine_domain']]
-      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + section_id + '_iter_' + str(iter_) + '_out.csv'), index=True)
+      save_df.to_csv(os.path.join(save_dir_r, 'deepst_' + dataset + '_iter_' + str(iter_) + '_out.csv'), index=True)
       aris.append(ARI)
       print(iter_)
       print('Dataset:', dataset)
