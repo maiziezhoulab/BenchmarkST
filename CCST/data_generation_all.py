@@ -174,11 +174,11 @@ def main(args):
     print(adata_h5.obs)
     print(adata_h5.obsm['spatial'])
     #count = adata_h5.X 
-    if args.Dim_PCA > len(adata_h5.obs.index):
-        newdim = len(adata_h5.obs.index)-1
-    else:
-        newdim = args.Dim_PCA
-    print(adata_h5.X.shape)
+    newdim = args.Dim_PCA
+    if newdim > min(len(adata_h5.obs.index), len(adata_h5.var.index)):
+        newdim = min(len(adata_h5.obs.index), len(adata_h5.var.index))-1
+    
+    # print(adata_h5.X.shape)
     print(newdim)
     features = adata_preprocess(adata_h5, min_cells=args.min_cells, pca_n_comps=newdim)
     gene_ids = adata_h5.var['gene_ids']
@@ -207,7 +207,7 @@ if __name__ == "__main__":
     args = parser.parse_args() 
 
     """dlpfc""" 
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/DLPFC12'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
     data_names = [[7, '151507'], [7, '151508'], [7, '151509'], [7, '151510'], [5, '151669'], [5, '151670'], [5, '151671'], [5, '151672'], [7, '151673'], [7, '151674'], [7, '151675'], [7, '151676']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -215,7 +215,7 @@ if __name__ == "__main__":
 
     """bc"""
     args.data_type='bc'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/BC'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/BC'
     data_names = [[20, 'section1']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -223,7 +223,7 @@ if __name__ == "__main__":
 
     """mVC""" # dlpfc/bc/mAB/her2tumor/mHypo/mVC/mPFC
     args.data_type='mVC'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/STARmap_mouse_visual_cortex'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_visual_cortex'
     data_names = [[7, 'STARmap_20180505_BY3_1k.h5ad']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -231,7 +231,7 @@ if __name__ == "__main__":
 
     """mPFC"""
     args.data_type='mPFC'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/STARmap_mouse_PFC'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_PFC'
     data_names = [[4, '20180417_BZ5_control'], [4, '20180419_BZ9_control'], [4, '20180424_BZ14_control']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -239,7 +239,7 @@ if __name__ == "__main__":
 
     """mHypo""" 
     args.data_type='mHypo'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus'
     data_names = [[14, '-0.04'], [15, '-0.09'], [15, '-0.14'], [15, '-0.19'], [16, '-0.24'], [15, '-0.29']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -247,7 +247,7 @@ if __name__ == "__main__":
 
     """Her2"""
     args.data_type='her2tumor'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/Her2_tumor'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/Her2_tumor'
     data_names = [[6, 'A1'], [5, 'B1'], [4, 'C1'], [4, 'D1'], [4, 'E1'], [4, 'F1'], [7, 'G2'], [7, 'H1']]
     for data_name in data_names:
         args.data_name = data_name[1]
@@ -255,7 +255,7 @@ if __name__ == "__main__":
     
     """mAB"""
     args.data_type='mAB'
-    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/mMAMP'
+    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mMAMP'
     data_names = [[52, 'MA']]
     for data_name in data_names:
         args.data_name = data_name[1]

@@ -65,7 +65,7 @@ class train():
                 use_gpu = True,
                 ):
         if use_gpu:
-            self.device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
+            self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         else:
             self.device = "cpu"
         self.processed_data = processed_data

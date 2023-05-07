@@ -1,0 +1,7 @@
+scanpy==1.9.1
+matplotlib==3.1.0
+numpy==1.20.3
+scikit-learn
+matplolib
+scipy
+pandas
