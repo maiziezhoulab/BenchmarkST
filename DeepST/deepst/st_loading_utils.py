@@ -174,6 +174,19 @@ def load_mMAMP(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/mMA
     return ad
 
 
+# cluster = 10,  
+def load_spacelhBC(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/visium_human_breast_cancer', section_id='human_bc_spatial_1142243F'):
+    # sectionid = filename in this dataset
+    # filename [human_bc_spatial_1142243F, human_bc_spatial_1160920F, human_bc_spatial_CID4290, human_bc_spatial_CID4465, human_bc_spatial_CID4535, human_bc_spatial_CID44971, human_bc_spatial_Parent_Visium_Human_BreastCancer]
+    # filename [human_bc_spatial_V1_Breast_Cancer_Block_A_Section_1, human_bc_spatial_V1_Breast_Cancer_Block_A_Section_2, human_bc_spatial_V1_Human_Invasive_Ductal_Carcinoma, human_bc_spatial_Visium_FFPE_Human_Breast_Cancer]
+    ad = sc.read_h5ad(filename=os.path.join(root_dir, section_id + '.h5ad'))
+    ad.var_names_make_unique()
+    print(ad.obs)
+
+    ad.obs['original_clusters'] = ad.obs['spatial_domain']
+    return ad
+
+
 # visualize everything for sanity check
 def anndata_visualization(ad, fname, save_folder='/home/yunfei/spatial_benchmarking/benchmarking_data/gt_visualization', col_name='Ground Truth', spot_size=150):
     sc.pl.spatial(ad,

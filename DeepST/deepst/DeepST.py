@@ -33,7 +33,7 @@ from his_feat import image_feature, image_crop
 from adj import graph, combine_graph_dict
 from model import DeepST_model, AdversarialNetwork
 from trainer import train
-from st_loading_utils import load_DLPFC, load_BC, load_mVC, load_mPFC, load_mHypothalamus, load_her2_tumor, load_mMAMP
+from st_loading_utils import load_DLPFC, load_BC, load_mVC, load_mPFC, load_mHypothalamus, load_her2_tumor, load_mMAMP, load_spacelhBC
 from augment import augment_adata
 
 """
@@ -172,6 +172,17 @@ class run():
 				adata = load_her2_tumor(root_dir=data_path, section_id=data_name)
 				print(data_name)
 				print(adata.obs)
+				adata = other_extra_info(adata)
+			elif data_name in ['human_bc_spatial_1142243F', 'human_bc_spatial_1160920F', 'human_bc_spatial_CID4290', 'human_bc_spatial_CID4465', 'human_bc_spatial_CID4535', 'human_bc_spatial_CID44971', 'human_bc_spatial_Parent_Visium_Human_BreastCancer',
+		                       'human_bc_spatial_V1_Breast_Cancer_Block_A_Section_1', 'human_bc_spatial_V1_Breast_Cancer_Block_A_Section_2', 'human_bc_spatial_V1_Human_Invasive_Ductal_Carcinoma', 'human_bc_spatial_Visium_FFPE_Human_Breast_Cancer']:
+				adata = load_spacelhBC(root_dir=data_path, section_id=data_name)
+				adata.X = adata.X.toarray()
+				# print(data_name)
+				# print(adata.obs.columns)
+				# print(adata.obsm['spatial'])
+				adata.obs['imagecol'] = adata.obsm['spatial'].T[1]
+				adata.obs['imagerow'] = adata.obsm['spatial'].T[0]
+				# print(adata.obs)
 				adata = other_extra_info(adata)
 			else:
 					print("exception in data name")
