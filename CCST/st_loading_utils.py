@@ -180,6 +180,48 @@ def load_mMAMP(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/mMA
     return ad
 
 
+# cluster = 10,  
+def load_spacelhBC(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/visium_human_breast_cancer', section_id='human_bc_spatial_1142243F'):
+    # sectionid = filename in this dataset
+    # filename [human_bc_spatial_1142243F, human_bc_spatial_1160920F, human_bc_spatial_CID4290, human_bc_spatial_CID4465, human_bc_spatial_CID4535, human_bc_spatial_CID44971, human_bc_spatial_Parent_Visium_Human_BreastCancer]
+    # filename [human_bc_spatial_V1_Breast_Cancer_Block_A_Section_1, human_bc_spatial_V1_Breast_Cancer_Block_A_Section_2, human_bc_spatial_V1_Human_Invasive_Ductal_Carcinoma, human_bc_spatial_Visium_FFPE_Human_Breast_Cancer]
+    ad = sc.read_h5ad(filename=os.path.join(root_dir, section_id + '.h5ad'))
+    ad.var_names_make_unique()
+    print(ad.obs)
+
+    ad.obs['original_clusters'] = ad.obs['spatial_domain']
+    return ad
+
+
+# too many spots ~80000, might not be usable
+def load_codex_spleen():
+    pass
+
+
+# too many spots ~30000, might not be usable
+def load_starmap_3D_cortex():
+    pass
+
+
+def load_osmfish_SS_cortex(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/SS_cortex', section_id='osmFISH_prep'):
+    pass
+
+
+# too many spots ~70000, might not be usable
+def load_merfish_preoptic(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/hypo_preoptic', section_id='merFISH_3D'):
+    pass
+
+
+
+def load_seqfish_SS_cortex(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/SS_cortex_seqfish', section_id='cortex_svz'):
+    pass
+
+
+
+def load_seqfish_OB(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/OB_seqfishplus', section_id='OB'):
+    pass
+
+
 # visualize everything for sanity check
 def anndata_visualization(ad, fname, save_folder='/home/yunfei/spatial_benchmarking/benchmarking_data/gt_visualization', col_name='Ground Truth', spot_size=150):
     sc.pl.spatial(ad,
@@ -190,6 +232,7 @@ def anndata_visualization(ad, fname, save_folder='/home/yunfei/spatial_benchmark
 
 
 if __name__ == '__main__':
+    pass
     # for sec in ['151507', '151508', '151509', '151510', '151669', '151670', '151671', '151672', '151673', '151674', '151675', '151676']:
     #     ad = load_DLPFC(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/DLPFC12', section_id=sec)
     #     # print(ad.obs)
@@ -218,16 +261,22 @@ if __name__ == '__main__':
     #     print(ad.obs['z'].nunique())
     # print("mPFC test passed")
 
-    for sec in ['0.26', '0.21', '0.16', '0.11', '0.06', '0.01', '-0.04', '-0.09', '-0.14', '-0.19', '-0.24', '-0.29']:
-        ad = load_mHypothalamus(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus', section_id=sec)
-        print(ad.obs)
-        spatial = np.vstack((ad.obs['x'].to_numpy(), ad.obs['y'].to_numpy()))
-        ad.obsm['spatial'] = spatial.T
-        # exit(-1)
-        # anndata_visualization(ad, 'mHypo_' + sec, col_name='GT', spot_size=30)
-        # print(sec)
-        # print(ad.obs['GT'].nunique())
-    print("mH test passed")
+    # for sec in ['0.26', '0.21', '0.16', '0.11', '0.06', '0.01', '-0.04', '-0.09', '-0.14', '-0.19', '-0.24', '-0.29']:
+    #     ad = load_mHypothalamus(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/mHypothalamus', section_id=sec)
+    #     print(ad.obs)
+    #     spatial = np.vstack((ad.obs['x'].to_numpy(), ad.obs['y'].to_numpy()))
+    #     ad.obsm['spatial'] = spatial.T
+    #     # exit(-1)
+    #     # anndata_visualization(ad, 'mHypo_' + sec, col_name='GT', spot_size=30)
+    #     # print(sec)
+    #     # print(ad.obs['GT'].nunique())
+    # print("mH test passed")
+
+    # for sec in ['human_bc_spatial_1142243F', 'human_bc_spatial_1160920F', 'human_bc_spatial_CID4290', 'human_bc_spatial_CID4465', 'human_bc_spatial_CID4535', 'human_bc_spatial_CID44971', 'human_bc_spatial_Parent_Visium_Human_BreastCancer']:
+    #     print(sec)
+    #     ad = load_spacelhBC(section_id=sec)
+    #     print(ad.obs['original_clusters'])
+    # print("load_spacelhBC test passed")
 
     # ad = load_mVC(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/STARmap_mouse_visual_cortex', section_id='STARmap_20180505_BY3_1k.h5ad')
     # print(ad)

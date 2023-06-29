@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import os
 import sys
 from h5py import Dataset, Group
-from st_loading_utils import load_DLPFC, load_BC, load_mVC, load_mPFC, load_mHypothalamus, load_her2_tumor, load_mMAMP
+from st_loading_utils import load_DLPFC, load_BC, load_mVC, load_mPFC, load_mHypothalamus, load_her2_tumor, load_mMAMP, load_spacelhBC
 
 ####################  get the whole training dataset
 
@@ -167,6 +167,8 @@ def main(args):
         adata_h5 = load_mVC(root_dir=args.data_path, section_id=args.data_name)
     elif args.data_type == 'mPFC':  
         adata_h5 = load_mPFC(root_dir=args.data_path, section_id=args.data_name)
+    elif args.data_type == 'spacelhBC':  
+        adata_h5 = load_spacelhBC(root_dir=args.data_path, section_id=args.data_name)
     else:
         print("exception in data type input")
         exit(-1)
@@ -181,7 +183,11 @@ def main(args):
     # print(adata_h5.X.shape)
     print(newdim)
     features = adata_preprocess(adata_h5, min_cells=args.min_cells, pca_n_comps=newdim)
-    gene_ids = adata_h5.var['gene_ids']
+    print(adata_h5.var)
+    if args.data_type == 'spacelhBC':
+        gene_ids = adata_h5.var.index
+    else:
+        gene_ids = adata_h5.var['gene_ids']
     coordinates = adata_h5.obsm['spatial']
 
     np.save(generated_data_fold + 'features.npy', features)
@@ -206,57 +212,76 @@ if __name__ == "__main__":
     parser.add_argument( '--generated_data_path', type=str, default='generated_data/', help='The folder to store the generated data')
     args = parser.parse_args() 
 
-    """dlpfc""" 
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
-    data_names = [[7, '151507'], [7, '151508'], [7, '151509'], [7, '151510'], [5, '151669'], [5, '151670'], [5, '151671'], [5, '151672'], [7, '151673'], [7, '151674'], [7, '151675'], [7, '151676']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args)
+    # """dlpfc""" 
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/DLPFC12'
+    # data_names = [[7, '151507'], [7, '151508'], [7, '151509'], [7, '151510'], [5, '151669'], [5, '151670'], [5, '151671'], [5, '151672'], [7, '151673'], [7, '151674'], [7, '151675'], [7, '151676']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
 
-    """bc"""
-    args.data_type='bc'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/BC'
-    data_names = [[20, 'section1']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args) 
+    # """bc"""
+    # args.data_type='bc'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/BC'
+    # data_names = [[20, 'section1']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args) 
 
-    """mVC""" # dlpfc/bc/mAB/her2tumor/mHypo/mVC/mPFC
-    args.data_type='mVC'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_visual_cortex'
-    data_names = [[7, 'STARmap_20180505_BY3_1k.h5ad']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args)
+    # """mVC""" # dlpfc/bc/mAB/her2tumor/mHypo/mVC/mPFC
+    # args.data_type='mVC'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_visual_cortex'
+    # data_names = [[7, 'STARmap_20180505_BY3_1k.h5ad']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
 
-    """mPFC"""
-    args.data_type='mPFC'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_PFC'
-    data_names = [[4, '20180417_BZ5_control'], [4, '20180419_BZ9_control'], [4, '20180424_BZ14_control']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args)
+    # """mPFC"""
+    # args.data_type='mPFC'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/STARmap_mouse_PFC'
+    # data_names = [[4, '20180417_BZ5_control'], [4, '20180419_BZ9_control'], [4, '20180424_BZ14_control']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
 
-    """mHypo""" 
-    args.data_type='mHypo'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus'
-    data_names = [[14, '-0.04'], [15, '-0.09'], [15, '-0.14'], [15, '-0.19'], [16, '-0.24'], [15, '-0.29']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args)
+    # """mHypo""" 
+    # args.data_type='mHypo'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mHypothalamus'
+    # data_names = [[14, '-0.04'], [15, '-0.09'], [15, '-0.14'], [15, '-0.19'], [16, '-0.24'], [15, '-0.29']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
 
-    """Her2"""
-    args.data_type='her2tumor'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/Her2_tumor'
-    data_names = [[6, 'A1'], [5, 'B1'], [4, 'C1'], [4, 'D1'], [4, 'E1'], [4, 'F1'], [7, 'G2'], [7, 'H1']]
-    for data_name in data_names:
-        args.data_name = data_name[1]
-        main(args)
+    # """Her2"""
+    # args.data_type='her2tumor'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/Her2_tumor'
+    # data_names = [[6, 'A1'], [5, 'B1'], [4, 'C1'], [4, 'D1'], [4, 'E1'], [4, 'F1'], [7, 'G2'], [7, 'H1']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
     
-    """mAB"""
-    args.data_type='mAB'
-    args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mMAMP'
-    data_names = [[52, 'MA']]
+    # """mAB"""
+    # args.data_type='mAB'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/mMAMP'
+    # data_names = [[52, 'MA']]
+    # for data_name in data_names:
+    #     args.data_name = data_name[1]
+    #     main(args)
+    
+    """hBC"""
+    args.data_type='spacelhBC'
+    # args.data_path = '/data/maiziezhou_lab/Datasets/ST_datasets/visium_human_breast_cancer'
+    args.data_path = '/home/yunfei/spatial_benchmarking/benchmarking_data/visium_human_breast_cancer'
+    data_names = [[10, 'human_bc_spatial_1142243F'], 
+                [10, 'human_bc_spatial_1160920F'], 
+                [10, 'human_bc_spatial_CID4290'], 
+                [10, 'human_bc_spatial_CID4465'], 
+                [10, 'human_bc_spatial_CID4535'], 
+                [10, 'human_bc_spatial_CID44971'], 
+                [10, 'human_bc_spatial_Parent_Visium_Human_BreastCancer'], 
+                [10, 'human_bc_spatial_V1_Breast_Cancer_Block_A_Section_1'],
+                [10, 'human_bc_spatial_V1_Breast_Cancer_Block_A_Section_2'],
+                [10, 'human_bc_spatial_V1_Human_Invasive_Ductal_Carcinoma'],
+                [10, 'human_bc_spatial_Visium_FFPE_Human_Breast_Cancer']]
     for data_name in data_names:
         args.data_name = data_name[1]
         main(args)

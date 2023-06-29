@@ -6,7 +6,7 @@ from sklearn.metrics import adjusted_rand_score
 import numpy as np
 from st_loading_utils import load_DLPFC, load_BC, load_mVC, load_mPFC, load_mHypothalamus, load_her2_tumor, load_mMAMP, load_spacelhBC
 
-iters = 1 # for boxplotting
+iters = 20 # for boxplotting
 
 save_dir_r = './clustering_result/'
 
