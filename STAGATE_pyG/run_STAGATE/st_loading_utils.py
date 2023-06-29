@@ -28,14 +28,16 @@ def load_BC(root_dir='../benchmarking_data/BC', section_id='section1'):
     # section1
     ad = sc.read_visium(path=os.path.join(root_dir, section_id), count_file=section_id+'_filtered_feature_bc_matrix.h5')
     ad.var_names_make_unique()
-    
-    gt_dir = os.path.join(root_dir, section_id, 'gt')
-    gt_df = pd.read_csv(os.path.join(gt_dir, 'tissue_positions_list_GTs.txt'), sep=',', header=None, index_col=0)
-    ad.obs['original_clusters'] = gt_df.loc[:, 6].astype(int)
-    ad.obs['original_clusters'] += 1
-    keep_bcs = ad.obs.dropna().index
-    ad = ad[keep_bcs].copy()
-    ad.obs['original_clusters'] = ad.obs['original_clusters'].astype(int).astype(str)
+    if section_id == 'section1':
+        gt_dir = os.path.join(root_dir, section_id, 'gt')
+        gt_df = pd.read_csv(os.path.join(gt_dir, 'tissue_positions_list_GTs.txt'), sep=',', header=None, index_col=0)
+        ad.obs['original_clusters'] = gt_df.loc[:, 6].astype(int)
+        ad.obs['original_clusters'] += 1
+        keep_bcs = ad.obs.dropna().index
+        ad = ad[keep_bcs].copy()
+        ad.obs['original_clusters'] = ad.obs['original_clusters'].astype(int).astype(str)
+    else: # section2 does not have gt
+        ad.obs['original_clusters'] = 1
     return ad
 
 
@@ -174,6 +176,48 @@ def load_mMAMP(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/mMA
     ad.obs = gt_df
     ad.obs['original_clusters'] = ad.obs['ground_truth']
     return ad
+
+
+# cluster = 10,  
+def load_spacelhBC(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/visium_human_breast_cancer', section_id='human_bc_spatial_1142243F'):
+    # sectionid = filename in this dataset
+    # filename [human_bc_spatial_1142243F, human_bc_spatial_1160920F, human_bc_spatial_CID4290, human_bc_spatial_CID4465, human_bc_spatial_CID4535, human_bc_spatial_CID44971, human_bc_spatial_Parent_Visium_Human_BreastCancer]
+    # filename [human_bc_spatial_V1_Breast_Cancer_Block_A_Section_1, human_bc_spatial_V1_Breast_Cancer_Block_A_Section_2, human_bc_spatial_V1_Human_Invasive_Ductal_Carcinoma, human_bc_spatial_Visium_FFPE_Human_Breast_Cancer]
+    ad = sc.read_h5ad(filename=os.path.join(root_dir, section_id + '.h5ad'))
+    ad.var_names_make_unique()
+    print(ad.obs)
+
+    ad.obs['original_clusters'] = ad.obs['spatial_domain']
+    return ad
+
+
+# too many spots ~80000, might not be usable
+def load_codex_spleen():
+    pass
+
+
+# too many spots ~30000, might not be usable
+def load_starmap_3D_cortex():
+    pass
+
+
+def load_osmfish_SS_cortex(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/SS_cortex', section_id='osmFISH_prep'):
+    pass
+
+
+# too many spots ~70000, might not be usable
+def load_merfish_preoptic(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/hypo_preoptic', section_id='merFISH_3D'):
+    pass
+
+
+
+def load_seqfish_SS_cortex(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/SS_cortex_seqfish', section_id='cortex_svz'):
+    pass
+
+
+
+def load_seqfish_OB(root_dir='/home/yunfei/spatial_benchmarking/benchmarking_data/OB_seqfishplus', section_id='OB'):
+    pass
 
 
 # visualize everything for sanity check
