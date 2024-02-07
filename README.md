@@ -9,7 +9,13 @@ We present a comprehensive evaluation of the performance of state-of-the-art met
   -  [ADEPT](#ADEPT)
   -  [GraphST](#GraphST)
   -  [conST](#conST)
-  -  [WGS mode Small Indel detection](#wgs-mode-small-Indel-detection)
+  -  [conGI](#conGI)
+  -  [SpatialPCA](#SpatialPCA)
+  -  [DR-SC](#DR-SC)
+  -  [STAGATE](#STAGATE)
+  -  [CCST](#CCST)
+  -  [SEDR](#SEDR)
+  -  [SpaGCN](#SpaGCN)
 - [Citation](#Citation)
 
 
@@ -34,17 +40,9 @@ Please follow the readme or jupyter notebook instructions in each subfolder for 
 
 #### ADEPT
 
-Github link: https://github.com/maiziezhoulab/AquilaDeepFilter
+Github link: https://github.com/maiziezhoulab/ADEPT
 
 Our tutorial: [run_ADEPT](https://github.com/maiziezhoulab/BenchmarkST/blob/main/ADEPT/run_ADEPT/run_ADEPT.ipynb)
-
-
-#### conST
-
-Github link: https://github.com/ys-zong/conST
-
-Our tutorial: [run_conST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/conST/run_conST.ipynb)
-
 
 #### GraphST
 
@@ -54,17 +52,30 @@ installation: https://deepst-tutorials.readthedocs.io/en/latest/Installation.htm
 
 Our tutorial: [run_GraphST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/GraphST/run_GraphST/tutorial.ipynb)
 
-#### DeepST
 
-Github link: https://github.com/JiangBioLab/DeepST
+#### conST
 
-Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/DeepST/deepst/run_DeepST.ipynb)
+Github link: https://github.com/ys-zong/conST
+
+Our tutorial: [run_conST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/conST/run_conST.ipynb)
 
 #### conGI
 
 Github link: https://github.com/biomed-AI/ConGI
 
 Our tutorial: [run_conGI](https://github.com/maiziezhoulab/BenchmarkST/blob/main/ConGI/run_ConGI/run_conGI.ipynb)
+
+#### SpatialPCA
+
+Github link: 
+
+Our tutorial: [run_SpatialPCA]()
+
+#### DR-SC
+
+Github link: 
+
+Our tutorial: [run_DRSC]()
 
 #### STAGATE
 
@@ -80,18 +91,25 @@ Github link: https://github.com/xiaoyeye/CCST
 
 Our tutorial: [run_CCST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/CCST/run_CCST.ipynb)
 
-#### SpaGCN
-
-Github link: https://github.com/jianhuupenn/SpaGCN
-
-Our tutorial: [run_SpaGCN](https://github.com/maiziezhoulab/BenchmarkST/blob/main/SpaGCN/run_SpaGCN/tutorial.ipynb)
-
 #### SEDR
 
 Github link: https://github.com/JinmiaoChenLab/SEDR
 
 Our tutorial: [run_SEDR](https://github.com/maiziezhoulab/BenchmarkST/blob/main/SEDR/run_SEDR.ipynb)
 
+#### SpaGCN
+
+Github link: https://github.com/jianhuupenn/SpaGCN
+
+Our tutorial: [run_SpaGCN](https://github.com/maiziezhoulab/BenchmarkST/blob/main/SpaGCN/run_SpaGCN/tutorial.ipynb)
+
+#### DeepST
+
+Github link: https://github.com/JiangBioLab/DeepST
+
+Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/DeepST/deepst/run_DeepST.ipynb)
+
 ## Citation
 
 -------
+Yunfei Hu, etc. "Benchmarking clustering, alignment and integration methods for spatial transcriptomics", currently under review
