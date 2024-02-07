@@ -2,6 +2,17 @@
 
 We present a comprehensive evaluation of the performance of state-of-the-art methods for cell/spot clustering on spatial transcriptomic datasets. Our goal is to provide the research field with a fair evaluation and comparison of all available methods to facilitate the users’ choice as well as shed more light on further developments to focus on the challenging aspects of ST clustering task.
 
+## Table of Content 
+- [Installation](#installation)
+- [Repository description](#Repository-description)
+- [General Usage](#General-Usage)
+  -  [ADEPT](#ADEPT)
+  -  [GraphST](#GraphST)
+  -  [conST](#conST)
+  -  [WGS mode Small Indel detection](#wgs-mode-small-Indel-detection)
+- [Citation](#Citation)
+
+
 ## Installation
 
 We strongly suggest to follow the installation instructions given by each method. We will also provide the .yaml file of our debugging environment in each subfolder.
