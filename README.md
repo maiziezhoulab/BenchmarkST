@@ -183,19 +183,19 @@ Our tutorial: [run_GPSA](https://github.com/maiziezhoulab/BenchmarkST/blob/main/
 
 Github link: https://github.com/raphael-group/paste
 
-Our tutorial: [run_PASTE]()
+Our tutorial: [run_PASTE](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_PASTE/PASTE.ipynb)
 
 #### PASTE2
 
 Github link: https://github.com/raphael-group/paste2
 
-Our tutorial: [run_PASTE2]()
+Our tutorial: [run_PASTE2](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_PASTE2/PASTE2.ipynb)
 
 #### SPACEL
 
 Github link: https://github.com/QuKunLab/SPACEL
 
-Our tutorial: [run_SPACEL]()
+Our tutorial: [run_SPACEL](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_SPACEL/SPACEL.ipynb)
 
 ### original Github repository links and our script for Integration task:
 
@@ -203,7 +203,7 @@ Our tutorial: [run_SPACEL]()
 
 Github link: https://github.com/guott15/SPIRAL
 
-Our tutorial: [run_SPIRAL]()
+Our tutorial: [run_SPIRAL](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_SPIRAL/SPIRAL.ipynb)
 
 #### STAligner
 
