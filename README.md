@@ -113,7 +113,7 @@ Our tutorial: [run_SpatialPCA](https://github.com/maiziezhoulab/BenchmarkST/blob
 
 Github link: https://github.com/feiyoung/DR.SC
 
-Our tutorial: [run_DRSC]()
+Our tutorial: [run_DRSC](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_DRSC/DR-SC.rst)
 
 #### STAGATE
 
@@ -151,7 +151,7 @@ Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/mai
 
 Github link: https://github.com/edward130603/BayesSpace
 
-Our tutorial: [run_BayesSpace]()
+Our tutorial: [run_BayesSpace](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_BayesSpace/BayesSpace.rst)
 
 #### BASS
 
