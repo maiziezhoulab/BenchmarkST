@@ -88,7 +88,7 @@ Our tutorial: [run_GraphST](https://github.com/maiziezhoulab/BenchmarkST/blob/ma
 
 Github link: https://github.com/hongleir/SpaceFlow
 
-Our tutorial: [run_SpaceFLow]()
+Our tutorial: [run_SpaceFLow](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_SpaceFlow/run_SpaceFlow.ipynb)
 
 
 #### conST
@@ -107,7 +107,7 @@ Our tutorial: [run_conGI](https://github.com/maiziezhoulab/BenchmarkST/blob/main
 
 Github link: https://github.com/shangll123/SpatialPCA
 
-Our tutorial: [run_SpatialPCA]()
+Our tutorial: [run_SpatialPCA](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_SpatialPCA/SpatialPCA.rst)
 
 #### DR-SC
 
@@ -171,7 +171,7 @@ Our tutorial: [run_PRECAST]()
 
 Github link: https://github.com/JEFworks-Lab/STalign
 
-Our tutorial: [run_STAlign]()
+Our tutorial: [run_STAlign](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_STalign/run_STalign.ipynb)
 
 #### GPSA
 
