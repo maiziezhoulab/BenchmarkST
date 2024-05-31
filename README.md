@@ -157,13 +157,13 @@ Our tutorial: [run_BayesSpace](https://github.com/maiziezhoulab/BenchmarkST/blob
 
 Github link: https://github.com/zhengli09/BASS
 
-Our tutorial: [run_BASS]()
+Our tutorial: [run_BASS](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_BASS/BASS_clustering.rst)
 
 #### PRECAST
 
 Github link: https://github.com/cran/PRECAST
 
-Our tutorial: [run_PRECAST]()
+Our tutorial: [run_PRECAST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_PRECAST/PRECAST_clustering.rst)
 
 ### original Github repository links and our script for Alignment task:
 
