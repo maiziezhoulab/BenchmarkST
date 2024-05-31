@@ -111,29 +111,6 @@ BANKSY tutorial
     rownames(spatial_coor) <- row.names(locs) 
 
 
-#. Data Loading: MHypothalamus Bregma
-
-.. code-block:: r
-    dir.input <- file.path('/data/maiziezhou_lab/Datasets/ST_datasets/', sample.name)
-    dir.output <- file.path('/data/maiziezhou_lab/yikang/ST_R/SpatialPCA/output/', sample.name, sheet.name)
-    if(!dir.exists(file.path(dir.output))){
-        dir.create(file.path(dir.output), recursive = TRUE)
-    }
-
-
-    filename = paste0(dir.input, '/MERFISH_Animal1_cnts.xlsx')
-    cnts <- as.data.frame(read_excel(filename, sheet = sheet.name))
-    row.names(cnts) <- cnts[,"...1"]
-    cnts <- cnts[ -c(1) ]
-
-    infoname = paste0(dir.input, '/MERFISH_Animal1_info.xlsx')
-    xys <- as.data.frame(read_excel(infoname, sheet = sheet.name))
-    row.names(xys) <- xys[,"...1"]
-    xys <- xys[-c(1)]
-    xy_coord <- xys[c(1,2)]
-
-    count <- as(as.matrix(cnts), "dgCMatrix")
-
 #. Run BANKSY
 
 .. code-block:: r
