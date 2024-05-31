@@ -177,7 +177,7 @@ Our tutorial: [run_STAlign](https://github.com/maiziezhoulab/BenchmarkST/blob/ma
 
 Github link: https://github.com/andrewcharlesjones/spatial-alignment
 
-Our tutorial: [run_GPSA]()
+Our tutorial: [run_GPSA](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_GPSA/run_GPSA.ipynb)
 
 #### PASTE
 
@@ -215,19 +215,19 @@ Our tutorial: [run_STAligner]()
 
 Github link: https://github.com/cran/PRECAST
 
-Our tutorial: [run_PRECAST]()
+Our tutorial: [run_PRECAST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_PRECAST/PRECAST_integration.rst)
 
 #### BASS
 
 Github link: https://github.com/zhengli09/BASS
 
-Our tutorial: [run_BASS]()
+Our tutorial: [run_BASS](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_BASS/BASS_integration.rst)
 
 #### DeepST
 
 Github link: https://github.com/JiangBioLab/DeepST
 
-Our tutorial: [run_DeepST]()
+Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/main/DeepST/deepst/DeepST_integration.ipynb)
 
 ## Citation
 
