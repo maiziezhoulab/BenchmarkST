@@ -1,6 +1,6 @@
 # BenchmarkST
 
-We present a comprehensive evaluation of the performance of state-of-the-art methods for cell/spot clustering, integration, and alignment on spatial transcriptomic datasets. Our goal is to provide the research field with a fair evaluation and comparison of all available methods to facilitate the users’ choice as well as shed more light on further developments to focus on the challenging aspects of ST based tasks.
+We present a comprehensive evaluation of the performance of state-of-the-art methods for cell/spot clustering, alignment, and integration on spatial transcriptomic datasets. Our goal is to provide the research field with a fair evaluation and comparison of all available methods to facilitate the users’ choice as well as shed more light on further developments to focus on the challenging aspects of ST based tasks.
 
 ## Table of Content 
 - [Online Documentation](#online-documentationtutorials)
@@ -43,11 +43,11 @@ We provide all the jupyter notebooks in each subfolder to run and evaluate all a
 
 Please follow the readme or jupyter notebook instructions in each subfolder for further details.
 
-### original Github repository links and our script running tutorials:
+### original Github repository links and our script for Clustering task:
 
 #### BANKSY
 
-Github link: https://github.com/maiziezhoulab/BANKSY
+Github link:https://github.com/prabhakarlab/Banksy
 
 Our tutorial: [run_BANKSY]()
 
@@ -67,7 +67,7 @@ Our tutorial: [run_GraphST](https://github.com/maiziezhoulab/BenchmarkST/blob/ma
 
 #### SpaceFLow
 
-Github link: 
+Github link: https://github.com/hongleir/SpaceFlow
 
 Our tutorial: [run_SpaceFLow]()
 
@@ -100,7 +100,7 @@ Our tutorial: [run_DRSC]()
 
 Github link: https://github.com/QIFEIDKN/STAGATE_pyG
 
-installation: https://stagate.readthedocs.io/en/latest/Installation_pyG.html
+<!-- installation: https://stagate.readthedocs.io/en/latest/Installation_pyG.html -->
 
 Our tutorial: [run_STAGATE](https://github.com/maiziezhoulab/BenchmarkST/blob/main/STAGATE_pyG/run_STAGATE/run_STAGATE.ipynb)
 
@@ -130,21 +130,85 @@ Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/mai
 
 #### BayesSpace
 
-Github link: 
+Github link: https://github.com/edward130603/BayesSpace
 
 Our tutorial: [run_BayesSpace]()
 
 #### BASS
 
-Github link: 
+Github link: https://github.com/zhengli09/BASS
 
 Our tutorial: [run_BASS]()
 
 #### PRECAST
 
-Github link: 
+Github link: https://github.com/cran/PRECAST
 
 Our tutorial: [run_PRECAST]()
+
+### original Github repository links and our script for Alignment task:
+
+#### STAlign
+
+Github link: https://github.com/JEFworks-Lab/STalign
+
+Our tutorial: [run_STAlign]()
+
+#### GPSA
+
+Github link: https://github.com/andrewcharlesjones/spatial-alignment
+
+Our tutorial: [run_GPSA]()
+
+#### PASTE
+
+Github link: https://github.com/raphael-group/paste
+
+Our tutorial: [run_PASTE]()
+
+#### PASTE2
+
+Github link: https://github.com/raphael-group/paste2
+
+Our tutorial: [run_PASTE2]()
+
+#### SPACEL
+
+Github link: https://github.com/QuKunLab/SPACEL
+
+Our tutorial: [run_SPACEL]()
+
+### original Github repository links and our script for Integration task:
+
+#### SPIRAL
+
+Github link: https://github.com/guott15/SPIRAL
+
+Our tutorial: [run_SPIRAL]()
+
+#### STAligner
+
+Github link: https://github.com/zhanglabtools/STAligner
+
+Our tutorial: [run_STAligner]()
+
+#### PRECAST
+
+Github link: https://github.com/cran/PRECAST
+
+Our tutorial: [run_PRECAST]()
+
+#### BASS
+
+Github link: https://github.com/zhengli09/BASS
+
+Our tutorial: [run_BASS]()
+
+#### DeepST
+
+Github link: https://github.com/JiangBioLab/DeepST
+
+Our tutorial: [run_DeepST]()
 
 ## Citation
 
