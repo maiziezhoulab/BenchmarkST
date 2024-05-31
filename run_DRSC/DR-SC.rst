@@ -4,6 +4,7 @@ DR-SC tutorial
 #. Dependencies
 
 .. code-block:: r
+    
     library("DR.SC")
     library(Seurat)
     library(ggplot2)
