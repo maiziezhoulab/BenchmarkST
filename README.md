@@ -209,7 +209,7 @@ Our tutorial: [run_SPIRAL](https://github.com/maiziezhoulab/BenchmarkST/blob/mai
 
 Github link: https://github.com/zhanglabtools/STAligner
 
-Our tutorial: [run_STAligner]()
+Our tutorial: [run_STAligner](https://github.com/maiziezhoulab/BenchmarkST/blob/main/run_STAligner/STAligner.ipynb)
 
 #### PRECAST
 
