@@ -2,7 +2,7 @@
 
 We present a comprehensive evaluation of the performance of state-of-the-art methods for cell/spot clustering, alignment, and integration on spatial transcriptomic datasets. Our goal is to provide the research field with a fair evaluation and comparison of all available methods to facilitate the users’ choice as well as shed more light on further developments to focus on the challenging aspects of ST based tasks.
 
-![](https://github.com/maiziezhoulab/BenchmarkST/blob/main/img_materials/BenchmarkST_ppl_0531.png)
+![](https://github.com/maiziezhoulab/BenchmarkST/blob/main/img_materials/ppl_final_ver.png)
 
 ## Table of Content 
 - [Online Documentation](#online-documentation--tutorials)
