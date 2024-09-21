@@ -233,5 +233,4 @@ Our tutorial: [run_DeepST](https://github.com/maiziezhoulab/BenchmarkST/blob/mai
 
 ## Citation
 
--------
-Hu, Y., Xie, M., Li, Y. et al. Benchmarking clustering, alignment, and integration methods for spatial transcriptomics. Genome Biol 25, 212 (2024). https://doi.org/10.1186/s13059-024-03361-0, [link](https://link.springer.com/article/10.1186/s13059-024-03361-0?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20240809&utm_content=10.1186%2Fs13059-024-03361-0)
+#### Hu Y, Xie M, Li Y, Rao M, Shen W, Luo C, Qin H, Baek J, Zhou XM. Benchmarking clustering, alignment, and integration methods for spatial transcriptomics. Genome Biol. 2024 Aug 9;25(1):212. PubMed Central PMCID: PMC11312151.
