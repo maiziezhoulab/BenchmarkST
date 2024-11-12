@@ -9,7 +9,7 @@ scs = spatial_coherence_score(g, l)
 print(scs)
 
 """CHAOS/PAS/ASW"""
-adata = load_DLPFC(section_id=sec)
+adata = load_DLPFC(section_id="151673")
 X = adata.obsm['spatial']
 pred_labels = adata.obs['original_clusters'].values
 # g, l = generate_graph_from_labels(adata, adata.obs['original_clusters'])
