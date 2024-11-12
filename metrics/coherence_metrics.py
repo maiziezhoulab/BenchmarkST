@@ -2,11 +2,17 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from tqdm import trange
+from scipy.spatial import *
+from sklearn.preprocessing import *
+
+from sklearn.metrics import *
+from scipy.spatial.distance import *
 
 """
 SCS
 PAS
 CHAOS
+ASW
 """
 
 def _get_spatial_entropy(C, C_sum):
@@ -84,30 +90,6 @@ def spatial_coherence_score(adata, annotation_key, degree=4, rep_time=1000, seed
 
     return (true_entropy - np.mean(entropies)) / np.std(entropies), true_entropy, entropies
 
-# def compute_CHAOS(clusterlabel, location):
-
-#     # clusterlabel = np.array(clusterlabel)
-#     # location = np.array(location)
-#     matched_location = StandardScaler().fit_transform(location)
-
-#     clusterlabel_unique = np.unique(clusterlabel)
-#     dist_val = 0.
-#     count = 0
-
-#     for k in clusterlabel_unique:
-#         location_cluster = matched_location[clusterlabel == k, :]
-#         if len(location_cluster) <= 2:
-#             continue
-#         else:
-#             count += len(location_cluster)
-#         # n_location_cluster = len(location_cluster)
-#         # results = [fx_1NN(i,location_cluster) for i in range(n_location_cluster)]
-#         results = fx_1NN(location_cluster)
-#         dist_val = dist_val + np.sum(results)
-#         # count = count + 1
-
-#     # return np.sum(dist_val)/len(clusterlabel)
-#     return dist_val / count
 
 def CHAOS_score(X, pred_labels):
     """
@@ -169,3 +151,8 @@ def PAS_score(X, pred_labels, k=6):
     # print("pred_labels.shape", pred_labels.shape)
     # Calculate the PAS score
     return ((pred_labels.reshape(-1, 1) != pred_labels[indices]).sum(1) > k / 2).mean()
+
+
+def ASW_score(X, pred_labels):
+    d = squareform(pdist(X))
+    return silhouette_score(X=d,labels=pred_labels,metric='precomputed')
